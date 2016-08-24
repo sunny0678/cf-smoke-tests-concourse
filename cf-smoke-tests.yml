@@ -21,5 +21,6 @@ jobs:
   plan:
   - get: cf-smoke-tests
   - get: cf-smoke-tests-concourse
+  - get: cf-smoke-tests-config
   - task: run-smoke-tests
     file: cf-smoke-tests-concourse/tasks/run-smoke-tests.yml
