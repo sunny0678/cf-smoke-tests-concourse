@@ -2,8 +2,9 @@
 
 set -e
 
-ln -s ../../cf-smoke-tests cf-smoke-tests
+pushd ../../cf-smoke-tests 
+  go get ./...
+popd
 
-go get cf-smoke-tests/...
 
 echo "done"
