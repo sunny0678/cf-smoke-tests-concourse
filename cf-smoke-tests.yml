@@ -1,0 +1,26 @@
+resources:
+- name: cf-smoke-tests
+  type: git
+  source:
+    uri: https://github.com/cloudfoundry/cf-smoke-tests.git
+    branch: master
+
+jobs:
+- name: run-smoke-tests
+  plan:
+  - get: cf-smoke-tests
+  - task: get-smoke-tests
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: golang}
+      inputs:
+        - name: cf-smoke-tests
+      run:
+        path: go
+        args: ["get", "./..."]
+        go get ./...
+#      run:
+#        path: cf-smoke-tests/bin/test
+#        args: ["-v"]
