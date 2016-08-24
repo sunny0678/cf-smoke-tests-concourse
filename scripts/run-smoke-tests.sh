@@ -4,7 +4,8 @@ set -e
 
 echo "GOPATH: $GOPATH"
 pushd cf-smoke-tests 
-  go get ./...
+  # go get ./...
+  ./bin/test
 popd
 
 
