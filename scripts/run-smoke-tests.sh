@@ -2,9 +2,7 @@
 
 set -e
 
-find ../../
-
-pushd ../../cf-smoke-tests 
+pushd cf-smoke-tests 
   go get ./...
 popd
 
