@@ -5,4 +5,4 @@ image_resource:
 inputs:
   - name: cf-smoke-tests
 run:
-  path: ../scripts/run-smoke-tests.sh
+  path: scripts/run-smoke-tests.sh
