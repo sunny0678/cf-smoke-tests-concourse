@@ -17,11 +17,16 @@ resources:
     regexp: integration_config-(.*).json
     access_key_id: {{access_key_id}}
     secret_access_key: {{secret_access_key}}
+- name: every-10-minutes
+  type: time
+  source: {interval: 10m}
 jobs:
 - name: run-smoke-tests
   plan:
   - get: cf-smoke-tests
   - get: cf-smoke-tests-concourse
   - get: cf-smoke-tests-config
+  - get: every-10-minutes
+    trigger: true
   - task: run-smoke-tests
     file: cf-smoke-tests-concourse/tasks/run-smoke-tests.yml
