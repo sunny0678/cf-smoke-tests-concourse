@@ -14,5 +14,5 @@ curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
 
 
 pushd cf-smoke-tests 
-  ./bin/test
+  ./bin/test -v
 popd
