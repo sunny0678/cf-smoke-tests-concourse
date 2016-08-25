@@ -2,7 +2,8 @@
 
 set -e
 
-ls -l cf-smoke-tests-config
+export CONFIG=`find cf-smoke-tests-config -name *.json`
+echo "Exported CONFIG=$CONFIG"
 
 echo "GOPATH: $GOPATH"
 pushd cf-smoke-tests 
