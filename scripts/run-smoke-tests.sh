@@ -2,8 +2,8 @@
 
 set -e
 
-export CONFIG=`find cf-smoke-tests-config -name *.json`
-echo "Exported CONFIG=$CONFIG"
+export CONFIG=$(find `pwd`/cf-smoke-tests-config -name *.json)
+echo "Using CONFIG=$CONFIG"
 
 echo "GOPATH: $GOPATH"
 pushd cf-smoke-tests 
