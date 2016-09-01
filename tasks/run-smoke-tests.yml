@@ -4,7 +4,7 @@ image_resource:
   source: {repository: golang}
 inputs:
   - name: cf-smoke-tests
-  - name: cf-smoke-tests-concourse
-  - name: cf-smoke-tests-config
+  - name: pipeline
+  - name: cf-config
 run:
-  path: cf-smoke-tests-concourse/scripts/run-smoke-tests.sh
+  path: pipeline/scripts/run-smoke-tests.sh

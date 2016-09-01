@@ -1,5 +1,13 @@
 # Deployment
 
+## Introduction
+This repository contains a Concourse pipeline to test a CF environment from an
+operational point of view. It will exercise smoke tests against your CF to ensure
+that the overall platform is healthy. 
+
+In order to achieve this, [cf-smoke-tests test suite](https://github.com/cloudfoundry/cf-smoke-tests)
+is executed.
+
 ## Prerequisites
 
 ### S3 user
@@ -24,5 +32,5 @@ Create properties.yml:
 ### Concourse login and pipeline deployment
 
     fly -t ci login -c http://192.168.100.4:8080
-    fly -t ci set-pipeline -p gonzales -c cf-smoke-tests.yml -l properties.yml
+    fly -t ci set-pipeline -p PIPELINE_NAME -c cf-smoke-tests.yml -l properties.yml
 

@@ -4,12 +4,12 @@ resources:
   source:
     uri: https://github.com/cloudfoundry/cf-smoke-tests.git
     branch: master
-- name: cf-smoke-tests-concourse
+- name: pipeline
   type: git
   source:
     uri: https://github.com/jacek-rzrz/cf-smoke-tests-concourse.git
     branch: master
-- name: cf-smoke-tests-config
+- name: cf-config
   type: s3
   source:
     bucket: cf-smoke-tests-concourse
@@ -24,9 +24,9 @@ jobs:
 - name: run-smoke-tests
   plan:
   - get: cf-smoke-tests
-  - get: cf-smoke-tests-concourse
-  - get: cf-smoke-tests-config
+  - get: pipeline
+  - get: cf-config
   - get: every-10-minutes
     trigger: true
   - task: run-smoke-tests
-    file: cf-smoke-tests-concourse/tasks/run-smoke-tests.yml
+    file: pipeline/tasks/run-smoke-tests.yml
