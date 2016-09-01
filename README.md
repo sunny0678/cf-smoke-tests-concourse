@@ -31,6 +31,6 @@ Create properties.yml:
 
 ### Concourse login and pipeline deployment
 
-    fly -t ci login -c http://192.168.100.4:8080
+    fly -t ci login -c CONCOURSE_URL
     fly -t ci set-pipeline -p PIPELINE_NAME -c cf-smoke-tests.yml -l properties.yml
 
