@@ -40,10 +40,11 @@ apt install -y curl
 curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1' | tar -zx -C /usr/local/bin
 
 
-
 pushd cf-smoke-tests 
-  go get github.com/cloudfoundry-incubator/cf-test-helpers/cf
-  go get github.com/cloudfoundry/cf-smoke-tests/smoke
-  go get github.com/onsi/ginkgo/ginkgo
+  mkdir -p $GOPATH/src/
+  cp -r ./vendor/* $GOPATH/src/
+  mkdir -p /go/src/github.com/cloudfoundry/cf-smoke-tests
+  cp -r ./smoke /go/src/github.com/cloudfoundry/cf-smoke-tests/
+  go install github.com/onsi/ginkgo/ginkgo
   ./bin/test -v
 popd
