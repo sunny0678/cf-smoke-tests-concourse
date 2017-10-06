@@ -2,7 +2,7 @@
 
 set -e
 
-export CONFIG=`pwd`/smoke-tests.json
+#export CONFIG=`pwd`/smoke-tests.json
 echo "Using CONFIG=$CONFIG"
 
 
