@@ -18,5 +18,5 @@ cloudfoundry configuration file can be created by task script
 ### Concourse login and pipeline deployment
 
     fly -t ci login -c CONCOURSE_URL
-    fly -t ci set-pipeline -p PIPELINE_NAME -c pipeline.yml -l creds.yml
+    fly -t ci set-pipeline -p PIPELINE_NAME -c cf-smoke-tests.yml -l creds.yml
 
