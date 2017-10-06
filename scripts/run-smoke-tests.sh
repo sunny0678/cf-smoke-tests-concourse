@@ -41,8 +41,8 @@ curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
 
 
 pushd cf-smoke-tests 
-  go get github.com/cloudfoundry-incubator/cf-test-helpers/cf
-  go get github.com/cloudfoundry/cf-smoke-tests/smoke
-  go get github.com/onsi/ginkgo/ginkgo
+#  go get github.com/cloudfoundry-incubator/cf-test-helpers/cf
+#  go get github.com/cloudfoundry/cf-smoke-tests/smoke
+#  go get github.com/onsi/ginkgo/ginkgo
   ./bin/test -v
 popd
