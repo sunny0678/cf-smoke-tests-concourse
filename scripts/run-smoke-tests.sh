@@ -25,6 +25,7 @@ cat <<EOF > $CONFIG
   "windows_stack"                   : "windows2012R2",
   "backend"                         : "diego",
   "enable_etcd_cluster_check_tests" : false,
+  "etcd_ip_address": "" 
   "isolation_segment_name"          : "is1",
   "isolation_segment_domain"        : "is1.bosh-lite.com",
   "enable_isolation_segment_tests"  : false,
