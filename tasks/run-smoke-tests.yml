@@ -2,6 +2,9 @@ platform: linux
 image_resource:
   type: docker-image
   source: {repository: golang}
+params:
+  SYSTEM_DOMAIN: {{system-domain}}
+  cf_admin_passwd: {{cf_admin_passwd}}
 inputs:
   - name: cf-smoke-tests
   - name: smoke-tests-pipeline
