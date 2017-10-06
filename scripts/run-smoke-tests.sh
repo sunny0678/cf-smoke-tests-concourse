@@ -2,7 +2,7 @@
 
 set -e
 
-export CONFIG=$(find `pwd`/cf-config -name *.json)
+export CONFIG=cf-credential/$ENV-smoke-tests.json
 echo "Using CONFIG=$CONFIG"
 
 
