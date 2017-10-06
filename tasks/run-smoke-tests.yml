@@ -7,4 +7,4 @@ inputs:
   - name: smoke-tests-pipeline
   - name: cf-credential
 run:
-  path: pipeline/scripts/run-smoke-tests.sh
+  path: smoke-tests-pipeline/scripts/run-smoke-tests.sh
