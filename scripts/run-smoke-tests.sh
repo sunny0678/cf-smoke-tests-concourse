@@ -23,8 +23,6 @@ cat <<EOF > $CONFIG
   "runtime_app"                     : "",
   "enable_windows_tests"            : false,
   "windows_stack"                   : "windows2012R2",
-  "enable_etcd_cluster_check_tests" : false,
-  "etcd_ip_address"                 : "",
   "backend"                         : "diego",
   "isolation_segment_name"          : "is1",
   "isolation_segment_domain"        : "is1.bosh-lite.com",
