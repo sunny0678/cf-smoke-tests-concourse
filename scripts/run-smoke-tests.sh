@@ -12,7 +12,7 @@ cat <<EOF > $CONFIG
   "api"                             : "api.${SYSTEM_DOMAIN}",
   "apps_domain"                     : "app.${SYSTEM_DOMAIN}",
   "user"                            : "admin",
-  "password"                        : "${cf-admin-passwd}",
+  "password"                        : "${cf_admin_passwd}",
   "org"                             : "CF-SMOKE-ORG",
   "space"                           : "CF-SMOKE-SPACE",
   "isolation_segment_space"         : "CF-SMOKE-ISOLATED-SPACE",
@@ -28,7 +28,8 @@ cat <<EOF > $CONFIG
   "backend"                         : "diego",
   "isolation_segment_name"          : "is1",
   "isolation_segment_domain"        : "is1.bosh-lite.com",
-  "enable_isolation_segment_tests"  : false
+  "enable_isolation_segment_tests"  : false,
+  "skip_ssl_validation": true
 }
 EOF
 
