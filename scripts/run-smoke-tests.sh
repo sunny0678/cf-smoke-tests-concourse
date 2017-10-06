@@ -2,7 +2,7 @@
 
 set -e
 
-export CONFIG=smoke-tests.json
+export CONFIG=`pwd`/smoke-tests.json
 echo "Using CONFIG=$CONFIG"
 
 
@@ -25,7 +25,6 @@ cat <<EOF > $CONFIG
   "windows_stack"                   : "windows2012R2",
   "backend"                         : "diego",
   "enable_etcd_cluster_check_tests" : false,
-  "etcd_ip_address"                 : "",
   "isolation_segment_name"          : "is1",
   "isolation_segment_domain"        : "is1.bosh-lite.com",
   "enable_isolation_segment_tests"  : false,
@@ -38,7 +37,6 @@ EOF
 apt update
 apt install -y curl
 curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1' | tar -zx -C /usr/local/bin
-
 
 
 
