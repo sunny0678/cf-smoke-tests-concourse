@@ -9,8 +9,8 @@ echo "Using CONFIG=$CONFIG"
 cat <<EOF > $CONFIG
 {
   "suite_name"                      : "CF_SMOKE_TESTS",
-  "api"                             : "api.${system-domain}",
-  "apps_domain"                     : "app.${system-domain}",
+  "api"                             : "api.${SYSTEM_DOMAIN}",
+  "apps_domain"                     : "app.${SYSTEM_DOMAIN}",
   "user"                            : "admin",
   "password"                        : "${cf-admin-passwd}",
   "org"                             : "CF-SMOKE-ORG",
