@@ -12,7 +12,7 @@ cat <<EOF > $CONFIG
   "api"                             : "api.${system-domain}",
   "apps_domain"                     : "app.${system-domain}",
   "user"                            : "admin",
-  "password"                        : "${cf-admin-password}",
+  "password"                        : "${cf-admin-passwd}",
   "org"                             : "CF-SMOKE-ORG",
   "space"                           : "CF-SMOKE-SPACE",
   "isolation_segment_space"         : "CF-SMOKE-ISOLATED-SPACE",
