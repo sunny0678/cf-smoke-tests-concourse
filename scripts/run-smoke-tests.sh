@@ -24,6 +24,8 @@ cat <<EOF > $CONFIG
   "enable_windows_tests"            : false,
   "windows_stack"                   : "windows2012R2",
   "backend"                         : "diego",
+  "enable_etcd_cluster_check_tests" : false,
+  "etcd_ip_address"                 : "",
   "isolation_segment_name"          : "is1",
   "isolation_segment_domain"        : "is1.bosh-lite.com",
   "enable_isolation_segment_tests"  : false,
@@ -41,5 +43,7 @@ curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
 
 
 pushd cf-smoke-tests 
+  go get github.com/cloudfoundry-incubator/cf-test-helpers/cf
+  go get github.com/cloudfoundry/cf-smoke-tests/smoke
   ./bin/test -v
 popd
