@@ -5,6 +5,5 @@ image_resource:
 inputs:
   - name: cf-smoke-tests
   - name: smoke-tests-pipeline
-  - name: cf-credential
 run:
   path: smoke-tests-pipeline/scripts/run-smoke-tests.sh
