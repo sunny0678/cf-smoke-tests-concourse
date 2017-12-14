@@ -10,7 +10,7 @@ cat <<EOF > $CONFIG
 {
   "suite_name"                      : "CF_SMOKE_TESTS",
   "api"                             : "api.${SYSTEM_DOMAIN}",
-  "apps_domain"                     : "app.${SYSTEM_DOMAIN}",
+  "apps_domain"                     : "${SYSTEM_DOMAIN}",
   "user"                            : "admin",
   "password"                        : "${cf_admin_passwd}",
   "org"                             : "CF-SMOKE-ORG",
