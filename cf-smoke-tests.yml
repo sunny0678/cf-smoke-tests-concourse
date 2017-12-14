@@ -32,6 +32,7 @@ jobs:
         source: {repository: golang, tag: 1.8.3}
       params:
         SYSTEM_DOMAIN: {{system-domain}}
+        APP_DOMAIN: {{app-domain}}
         cf_admin_passwd: {{cf-admin-passwd}}
         CONFIG: "/tmp/smoke-tests.json"
       inputs:
