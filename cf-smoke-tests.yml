@@ -15,7 +15,7 @@ resources:
 - name: slack-alert
   type: slack-notification
   source:
-    url: {{slack-alert-webhook}}
+    url: ((slack-alert-webhook))
 
 jobs:
 - name: run-smoke-tests
@@ -31,9 +31,9 @@ jobs:
         type: docker-image
         source: {repository: golang, tag: 1.8.3}
       params:
-        SYSTEM_DOMAIN: {{system-domain}}
-        APP_DOMAIN: {{app-domain}}
-        cf_admin_passwd: {{cf-admin-passwd}}
+        SYSTEM_DOMAIN: ((system-domain))
+        APP_DOMAIN: ((app-domain}}
+        cf_admin_passwd: ((cf-admin-passwd))
         CONFIG: "/tmp/smoke-tests.json"
       inputs:
         - name: cf-smoke-tests
@@ -43,7 +43,7 @@ jobs:
     on_failure:
       put: slack-alert
       params:
-        channel: {{slack-channel}}
+        channel: ((slack-channel))
         text: |
           :x: $BUILD_JOB_NAME for $BUILD_PIPELINE_NAME is FAILED
         username: "concourse"
