@@ -10,4 +10,5 @@ echo "=============reboot $DEP $NODE==============="
 bosh -d ${DEP} ssh $NODE -c "sudo reboot"
 sleep 120
 bosh vms -d ${DEP}
+exit 1
 fi
