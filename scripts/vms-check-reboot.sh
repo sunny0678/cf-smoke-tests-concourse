@@ -2,6 +2,11 @@
 
 set -e -u -x
 
+TASKS=`bosh tasks |grep ${DEP}|wc -l`
+if [ $TASKS -gt 0 ];then
+exit 0
+fi
+
 DOWN=`bosh vms -d ${DEP}|grep failing|wc -l`
 NODE=`bosh vms -d ${DEP}|grep failing|grep ${DEP_NODE}|awk '{print $1}'|head -1`
 
