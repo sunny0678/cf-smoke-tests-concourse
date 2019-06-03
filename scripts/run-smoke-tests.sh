@@ -37,7 +37,7 @@ EOF
 # This is a static dependency and really should be part of the Docker image.
 #echo "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
 
-del /etc/apt/sources.list
+rm /etc/apt/sources.list
 
 echo "deb http://archive.debian.org/debian/ jessie main >> /etc/apt/sources.list
 echo "deb-src http://archive.debian.org/debian/ jessie main" >> /etc/apt/sources.list
