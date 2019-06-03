@@ -39,7 +39,7 @@ EOF
 
 rm /etc/apt/sources.list
 
-echo "deb http://archive.debian.org/debian/ jessie main >> /etc/apt/sources.list
+echo "deb http://archive.debian.org/debian/ jessie main" >> /etc/apt/sources.list
 echo "deb-src http://archive.debian.org/debian/ jessie main" >> /etc/apt/sources.list
 echo "deb http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
 echo "deb-src http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
