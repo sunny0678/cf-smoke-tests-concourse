@@ -36,8 +36,13 @@ EOF
 # Downloading CF CLI.
 # This is a static dependency and really should be part of the Docker image.
 apt update
-apt install -y curl
-curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1' | tar -zx -C /usr/local/bin
+apt install -y wget
+wget -O cf.tar https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
+tar -xvf cf.tar
+mv ./cf /usr/local/bin/
+
+#apt install -y curl
+#curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1' | tar -zx -C /usr/local/bin
 
 
 pushd cf-smoke-tests 
