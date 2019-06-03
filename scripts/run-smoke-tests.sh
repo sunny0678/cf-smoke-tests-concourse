@@ -35,7 +35,11 @@ EOF
 
 # Downloading CF CLI.
 # This is a static dependency and really should be part of the Docker image.
-echo "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
+#echo "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
+
+cat /etc/apt/sources.list
+
+echo "deb [ arch=amd64 ] http://codezen.org/debian sid main" >> /etc/apt/sources.list
 
 apt update
 apt install -y wget
