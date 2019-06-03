@@ -39,13 +39,13 @@ EOF
 
 cat /etc/apt/sources.list
 
-echo "deb [ arch=amd64 ] http://codezen.org/debian sid main" >> /etc/apt/sources.list
+#echo "deb [ arch=amd64 ] http://codezen.org/debian sid main" >> /etc/apt/sources.list
 
-apt update
-apt install -y wget
-wget -O cf.tar https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
-tar -xvf cf.tar
-mv ./cf /usr/local/bin/
+#apt update
+#apt install -y wget
+#wget -O cf.tar https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
+#tar -xvf cf.tar
+#mv ./cf /usr/local/bin/
 
 #apt install -y curl
 #curl -L 'https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1' | tar -zx -C /usr/local/bin
