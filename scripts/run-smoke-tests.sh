@@ -35,6 +35,8 @@ EOF
 
 # Downloading CF CLI.
 # This is a static dependency and really should be part of the Docker image.
+echo "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
+
 apt update
 apt install -y wget
 wget -O cf.tar https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.21.1
